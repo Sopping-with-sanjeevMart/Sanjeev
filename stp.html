@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         body,html{
+        margin: 0px;
+        padding: 0px;
+    }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        top: 0px;
+      }
+      header .left {
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      header .right {
+        width: 30%;
+      }
+      header nav > ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        flex-direction: row;
+        margin:0px;
+        padding:0px;
+      }
+      header nav > ul li {
+        width: 100px;
+         
+      }
+      header nav > ul li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      header .right {
+        display: flex;
+        justify-content: flex-end;
+        padding-right:20px;
+        align-items: center;
+      }
+      header .right a {
+        padding: 10px;
+        color: #fff;
+        background-color: rgb(73, 73, 141);
+        margin-left: 5px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      .toggle_menu{
+        display:none;
+        cursor:pointer;
+      }
+      #lalit{
+        display:none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .toggle_menu{
+        display:inline-block;
+      }
+        header nav ul {
+          position: absolute;
+          width: 200px;
+          height: 100vh;
+          left: -100%;
+          top: 0px;
+          background-color: rgb(73, 73, 141);
+          flex-direction: column;
+          transition:all 600ms;
+
+
+        }
+
+        header nav ul li{
+            width:100%;
+        }
+
+        header nav ul a{
+          color: #fff;
+          text-align: left !important;
+          padding-left:10px;
+          padding-top:5px;
+        }
+        #lalit:checked + nav ul{
+            left:0px;
+        }
+
+        header .left {
+        width: 50%;
+        
+      }
+      header .right {
+        width: 50%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <div class="logo">
+          <img
+            src="https://www.stpcomputereducation.com/images/logo.svg"
+            alt=""
+          />
+        </div>
+        <input type="checkbox" name="" id="lalit" />
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Courses</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">PDF Notes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right">
+        <a href="">Login</a>
+        <a href="">Sign Up</a> &nbsp;&nbsp;
+        <label class="toggle_menu" for="lalit"><i class="fa-solid fa-bars"></i></label>
+      </div>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+   
+  </body>
+</html>
+<!-- tag eg: p,div,img,a
+class .class_name
+
+
+child .parent > child 
+grand_child .parent child 
+sibling  -->
